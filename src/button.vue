@@ -10,7 +10,7 @@
         height: var(--button-height);
         padding: 0 1em;
         border-radius: var(--border-radius);
-        border: 1px solid var(--bordercolor);
+        border: 1px solid var(--border-color);
         background: var(--button-bg);
 
         &:hover {
@@ -18,10 +18,10 @@
         }
 
         &:active {
-            background-color: var(--border-active-bg);
+            background-color: var(--button-active-bg);
         }
 
-        &.focus {
+        &:focus {
             outline: none;
         }
     }
