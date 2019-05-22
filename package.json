@@ -15,5 +15,8 @@
     "ui"
   ],
   "author": "WillWang\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[W\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
 }
