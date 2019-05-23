@@ -1,5 +1,4 @@
 <template>
-    <div>
         <button class="g-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
             <g-icon class="icon" v-if="icon && !loading" :name="icon"></g-icon>
             <g-icon class="loading icon" name="loading" v-if="loading"></g-icon>
@@ -7,7 +6,6 @@
                 <slot></slot>
             </div>
         </button>
-    </div>
 </template>
 <script>
     export default {
@@ -34,6 +32,7 @@
     }
     .g-button {font-style: var(--font-size);height: var(--button-height);padding: 0 1em;border-radius: var(--border-radius);
         border: 1px solid var(--border-color);background: var(--button-bg);display: inline-flex;justify-content: center;align-items: center;
+        vertical-align: middle;
         &:hover {border-color: var(--border-color-hover);}
         &:active {background-color: var(--button-active-bg);}
         &:focus {outline: none;}
