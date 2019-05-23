@@ -3,7 +3,17 @@
         <slot></slot>
     </div>
 </template>
-<script></script>
+<script>
+    export default {
+        mounted() {
+            for(let node of this.$el.children){
+                if (node.nodeName !== 'BUTTON') {
+                    console.warn('g-button-group的子元素应该全是g-button')
+                }
+            }
+        }
+    }
+</script>
 <style lang="scss">
     .g-button-group{
         display: inline-flex;
