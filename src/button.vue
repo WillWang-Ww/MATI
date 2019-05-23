@@ -32,35 +32,17 @@
         0% { transform: rotate(0deg);}
         100% { transform: rotate(360deg);}
     }
-    .g-button {
-        font-style: var(--font-size);
-        height: var(--button-height);
-        padding: 0 1em;
-        border-radius: var(--border-radius);
-        border: 1px solid var(--border-color);
-        background: var(--button-bg);
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        &:hover {
-            border-color: var(--border-color-hover);
-        }
-
-        &:active {
-            background-color: var(--button-active-bg);
-        }
-
-        &:focus {
-            outline: none;
-        }
+    .g-button {font-style: var(--font-size);height: var(--button-height);padding: 0 1em;border-radius: var(--border-radius);
+        border: 1px solid var(--border-color);background: var(--button-bg);display: inline-flex;justify-content: center;align-items: center;
+        &:hover {border-color: var(--border-color-hover);}
+        &:active {background-color: var(--button-active-bg);}
+        &:focus {outline: none;}
         > .content{order:2;}
         > .g-icon{order:1;margin-right: 0.3em;margin-left: 0em;}
         &.icon-right{
             > .content{order:1;}
             > .g-icon{order:2;margin-right: 0em;margin-left: 0.3em;}
         }
-        .loading{
-            animation: loading 1s infinite linear;
-        }
+        .loading{animation: loading 1s infinite linear;}
     }
 </style>
