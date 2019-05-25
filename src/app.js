@@ -27,7 +27,7 @@ const expect = chai.expect
             icon:'shezhi'
         }
     })
-    button.$mount('test')
+    button.$mount()
     let useElement = button.$el.querySelector('use')
     let href = useElement.getAttribute('xlink:href')
     expect(href).to.eq('#icon-shezhi')
