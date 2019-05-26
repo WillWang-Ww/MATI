@@ -21,7 +21,7 @@ import spies from 'chai-spies'
 
 chai.use(spies)
 const expect = chai.expect
-//单元测试
+//单元测试 作用域隔离、断言
 {
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
