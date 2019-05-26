@@ -26,13 +26,13 @@ const expect = chai.expect
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData:{
-            icon:'shezhi'
+            icon:'setting'
         }
     })
     vm.$mount()
     let useElement = vm.$el.querySelector('use')
     let href = useElement.getAttribute('xlink:href')
-    expect(href).to.eq('#icon-shezhi')
+    expect(href).to.eq('#icon-setting')
     vm.$el.remove()
     vm.$destroy()
 }
@@ -40,7 +40,7 @@ const expect = chai.expect
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData:{
-            icon:'shezhi',
+            icon:'setting',
             loading:true
         }
     })
@@ -57,7 +57,7 @@ const expect = chai.expect
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData:{
-            icon:'shezhi',
+            icon:'setting',
         }
     })
     vm.$mount(div)
@@ -73,7 +73,7 @@ const expect = chai.expect
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData:{
-            icon:'shezhi',
+            icon:'setting',
             iconPosition:'right'
         }
     })
@@ -89,7 +89,7 @@ const expect = chai.expect
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData:{
-            icon:'shezhi',
+            icon:'setting',
         }
     })
     vm.$mount()
