@@ -12,6 +12,7 @@
     import Icon from './icon'
     Vue.component('g-icon',Icon)
     export default {
+        name:'MatiButton',
         props: {
             icon:{},
             loading:{

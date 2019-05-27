@@ -1,6 +1,14 @@
-# MATI
+# MATI-基于Vue的UI组件库 MATI
 
-基于Vue的UI组件库 MATI
+[![Build Status](https://www.travis-ci.org/WillWang-Ww/MATI.svg?branch=master)](https://www.travis-ci.org/WillWang-Ww/MATI)
+
+# 介绍
+
+
+
+## 开始使用
+
+
 
 作者 ： Will Wang
  

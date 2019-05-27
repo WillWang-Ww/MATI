@@ -1,9 +1,10 @@
 {
   "name": "mati",
   "version": "0.0.1",
-  "description": "\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[CUI框架",
+  "description": "基于Vue的UI框架",
   "main": "index.js",
   "scripts": {
+    "start": "parcel index.html --no-cache",
     "dev-test": "parcel watch test/* --no-cache & karma start",
     "test": "parcel build test/* --no-minify && karma start --single-run"
   },
@@ -15,7 +16,7 @@
     "vue",
     "ui"
   ],
-  "author": "WillWang\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[W\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
+  "author": "WillWang",
   "license": "MIT",
   "dependencies": {
     "vue": "^2.6.10",
