@@ -66,9 +66,14 @@ describe('props', () => {
             const callback = sinon.fake();
             vm.$on('change', callback)
             let event = new Event('change');
+            Object.defineProperty(
+                event,'target',{
+                    value:{value:'hi'},enumerable:true
+                }
+            )
             let inputElement = vm.$el.querySelector('input')
             inputElement.dispatchEvent(event)
-            expect(callback).to.have.been.calledWith(event)
+            expect(callback).to.have.been.calledWith('hi')
             vm.$destroy()
         })
         it('支持focus', () => {
@@ -76,9 +81,14 @@ describe('props', () => {
             const callback = sinon.fake();
             vm.$on('focus', callback)
             let event = new Event('focus');
+            Object.defineProperty(
+                event,'target',{
+                    value:{value:'hi'},enumerable:true
+                }
+            )
             let inputElement = vm.$el.querySelector('input')
             inputElement.dispatchEvent(event)
-            expect(callback).to.have.been.calledWith(event)
+            expect(callback).to.have.been.calledWith('hi')
             vm.$destroy()
         })
         it('支持blur', () => {
@@ -86,9 +96,29 @@ describe('props', () => {
             const callback = sinon.fake();
             vm.$on('blur', callback)
             let event = new Event('blur');
+            Object.defineProperty(
+                event,'target',{
+                    value:{value:'hi'},enumerable:true
+                }
+            )
             let inputElement = vm.$el.querySelector('input')
             inputElement.dispatchEvent(event)
-            expect(callback).to.have.been.calledWith(event)
+            expect(callback).to.have.been.calledWith('hi')
+            vm.$destroy()
+        })
+        it('支持input', () => {
+            const vm = new Constructor({}).$mount()
+            const callback = sinon.fake();
+            vm.$on('input', callback)
+            let event = new Event('input');
+            Object.defineProperty(
+                event,'target',{
+                    value:{value:'hi'},enumerable:true
+                }
+            )
+            let inputElement = vm.$el.querySelector('input')
+            inputElement.dispatchEvent(event)
+            expect(callback).to.have.been.calledWith('hi')
             vm.$destroy()
         })
 })
