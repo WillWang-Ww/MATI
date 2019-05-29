@@ -68,12 +68,12 @@ describe('props', () => {
             let event = new Event('change');
             Object.defineProperty(
                 event,'target',{
-                    value:{value:'hi'},enumerable:true
+                    value:{value:'Demo'},enumerable:true
                 }
             )
             let inputElement = vm.$el.querySelector('input')
             inputElement.dispatchEvent(event)
-            expect(callback).to.have.been.calledWith('hi')
+            expect(callback).to.have.been.calledWith('Demo')
             vm.$destroy()
         })
         it('支持focus', () => {
@@ -83,12 +83,12 @@ describe('props', () => {
             let event = new Event('focus');
             Object.defineProperty(
                 event,'target',{
-                    value:{value:'hi'},enumerable:true
+                    value:{value:'Demo'},enumerable:true
                 }
             )
             let inputElement = vm.$el.querySelector('input')
             inputElement.dispatchEvent(event)
-            expect(callback).to.have.been.calledWith('hi')
+            expect(callback).to.have.been.calledWith('Demo')
             vm.$destroy()
         })
         it('支持blur', () => {
@@ -98,12 +98,12 @@ describe('props', () => {
             let event = new Event('blur');
             Object.defineProperty(
                 event,'target',{
-                    value:{value:'hi'},enumerable:true
+                    value:{value:'Demo'},enumerable:true
                 }
             )
             let inputElement = vm.$el.querySelector('input')
             inputElement.dispatchEvent(event)
-            expect(callback).to.have.been.calledWith('hi')
+            expect(callback).to.have.been.calledWith('Demo')
             vm.$destroy()
         })
         it('支持input', () => {
@@ -113,12 +113,12 @@ describe('props', () => {
             let event = new Event('input');
             Object.defineProperty(
                 event,'target',{
-                    value:{value:'hi'},enumerable:true
+                    value:{value:'Demo'},enumerable:true
                 }
             )
             let inputElement = vm.$el.querySelector('input')
             inputElement.dispatchEvent(event)
-            expect(callback).to.have.been.calledWith('hi')
+            expect(callback).to.have.been.calledWith('Demo')
             vm.$destroy()
         })
 })

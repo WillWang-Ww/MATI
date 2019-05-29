@@ -7,15 +7,58 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MATI UI</title>
     <style>
-        * {margin: 0;padding: 0;box-sizing: border-box;}
-        html {--button-height: 32px;--font-size: 14px;--button-bg: white;--button-active-bg: #eee;--color: #333;--border-color: #999;--border-color-hover: #666;--border-radius: 4px;}
-        #app {margin: 20px;}
-        body {font-size: var(--font-size);}
-        .box{margin:20px;}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            --button-height: 32px;
+            --font-size: 14px;
+            --button-bg: white;
+            --button-active-bg: #eee;
+            --color: #333;
+            --border-color: #999;
+            --border-color-hover: #666;
+            --border-radius: 4px;
+        }
+
+        #app {
+            margin: 20px;
+        }
+
+        body {
+            font-size: var(--font-size);
+        }
+
+        .box {
+            margin: 20px;
+        }
     </style>
 </head>
 <body>
 <div id="app">
+    <g-row>
+        <g-col>1</g-col>
+        <g-col>2</g-col>
+    </g-row>
+    <g-row>
+        <g-col>1</g-col>
+        <g-col>2</g-col>
+        <g-col>3</g-col>
+    </g-row>
+    <g-row>
+        <g-col>1</g-col>
+        <g-col>2</g-col>
+        <g-col>3</g-col>
+        <g-col>4</g-col>
+    </g-row>
+    <g-row>
+        <g-col :span="2">1</g-col>
+        <g-col :span="22">2</g-col>
+
+    </g-row
     <div class="box">
         <g-button :loading="loading1" @click="loading1 = !loading1">
             设置
@@ -36,15 +79,14 @@
     <div class="box">
         <g-input v-model="message"></g-input>
         <p>{{message}}</p>
-        <button @click="message+=1">+1</button>
     </div>
     <div class="box">
         <g-input value="Demo2" disabled></g-input>
         <g-input value="Demo3" readonly></g-input>
     </div>
-   <div class="box">
-       <g-input value="Demo4" error="姓名不能少于两个字" @change="inputChange"></g-input>
-   </div>
+    <div class="box">
+        <g-input value="Demo4" error="姓名不能少于两个字" @change="inputChange"></g-input>
+    </div>
 </div>
 <script src="./src/app.js"></script>
 </body>
