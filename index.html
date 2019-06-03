@@ -31,80 +31,12 @@
         body {
             font-size: var(--font-size);
         }
-
-        .box {
-            margin: 20px;
-        }
     </style>
 </head>
 <body>
-<style>
-    .demo{
-        background: #ddd;
-        border: 1px solid #666;
-        height: 100px;
-    }
-</style>
+
 <div id="app">
-    <g-row>
-        <g-col span="24" :ipad="{span:8}" :narrow-pc="{span:6}" :pc="{span:4}"><div class="demo"></div></g-col>
-        <g-col span="24" :ipad="{span:8}" :narrow-pc="{span:6}" :pc="{span:4}"><div class="demo"></div></g-col>
-        <g-col span="24" :ipad="{span:8}" :narrow-pc="{span:6}" :pc="{span:4}"><div class="demo"></div></g-col>
-        <g-col span="24" :ipad="{span:8}" :narrow-pc="{span:6}" :pc="{span:4}"><div class="demo"></div></g-col>
-        <g-col span="24" :ipad="{span:8}" :narrow-pc="{span:6}" :pc="{span:4}"><div class="demo"></div></g-col>
-        <g-col span="24" :ipad="{span:8}" :narrow-pc="{span:6}" :pc="{span:4}"><div class="demo"></div></g-col>
-    </g-row>
-    <g-row>
-        <g-col>1</g-col>
-        <g-col>2</g-col>
-        <g-col>3</g-col>
-    </g-row>
-    <g-row>
-        <g-col>1</g-col>
-        <g-col>2</g-col>
-        <g-col>3</g-col>
-        <g-col>4</g-col>
-    </g-row>
-    <g-row>
-        <g-col :span="2">1</g-col>
-        <g-col :span="22">2</g-col>
-    </g-row>
-    <g-row>
-        <g-col :span="2">1</g-col>
-        <g-col :span="20" offset="2">2</g-col>
-    </g-row>
-    <g-row gutter="20">
-        <g-col>1</g-col>
-        <g-col>2</g-col>
-    </g-row>
-    <div class="box">
-        <g-button :loading="loading1" @click="loading1 = !loading1">
-            设置
-        </g-button>
-        <g-button icon="setting" :loading="loading2" @click="loading2 = !loading2">
-            设置
-        </g-button>
-        <g-button icon="setting" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
-            设置
-        </g-button>
-    </div>
-    <div class="box">
-        <g-button-group>
-            <g-button icon="left">上一页</g-button>
-            <g-button icon="right" icon-position="right">下一页</g-button>
-        </g-button-group>
-    </div>
-    <div class="box">
-        <g-input v-model="message"></g-input>
-        <p>{{message}}</p>
-    </div>
-    <div class="box">
-        <g-input value="Demo2" disabled></g-input>
-        <g-input value="Demo3" readonly></g-input>
-    </div>
-    <div class="box">
-        <g-input value="Demo4" error="姓名不能少于两个字" @change="inputChange"></g-input>
-    </div>
+    <button @click="showToast">pick me</button>
 </div>
 <script src="./src/app.js"></script>
 </body>
