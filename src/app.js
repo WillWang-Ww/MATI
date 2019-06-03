@@ -25,11 +25,22 @@ new Vue({
         loading3: false,
         message:'Demo'
     },
-    create(){
+    created () {
+        this.$toast('一条长长长长长长的信息来啦',{
+            enableHtml: false,
+            position:'middle',
+            closeButton: {
+                text:'关闭',
+                callback(){
+                    console.log('OK')
+                }
+            },
+            autoClose: true,
+            autoCloseDelay: 10
+        })
     },
     methods:{
         showToast(){
-            this.$toast('I am message')
         }
     }
 })
