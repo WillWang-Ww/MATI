@@ -29,10 +29,19 @@ new Vue({
 
     },
     methods:{
-        showToast(){
+        showToast1(){
+            this.showToast('top')
+        },
+        showToast2(){
+            this.showToast('middle')
+        },
+        showToast3(){
+            this.showToast('bottom')
+        },
+        showToast(position){
             this.$toast('一条长长长长长长的信息来啦',{
                 enableHtml: false,
-                position:'bottom',
+                position,
                 closeButton: {
                     text:'关闭',
                     callback(){
@@ -40,7 +49,7 @@ new Vue({
                     }
                 },
                 autoClose: true,
-                autoCloseDelay: 10
+                autoCloseDelay: 100
             })
         }
     }

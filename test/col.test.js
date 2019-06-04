@@ -23,33 +23,4 @@ describe('Col', () => {
         div.remove()
         vm.$destroy()
     })
-    it('accept offset.', () => {
-        const div = document.createElement('div')
-        document.body.appendChild(div)
-        const Constructor = Vue.extend(Col)
-        const vm = new Constructor({
-            propsData: {
-                offset:1
-            }
-        }).$mount(div)
-        const element = vm.$el
-        expect(vm.$el.classList.contains('offset-1')).to.eq(true)
-        div.remove()
-        vm.$destroy()
-    })
-    it('accept pc.', () => {
-        const div = document.createElement('div')
-        document.body.appendChild(div)
-        const Constructor = Vue.extend(Col)
-        const vm = new Constructor({
-            propsData: {
-                pc:{span:1,offset:2}
-            }
-        }).$mount(div)
-        const element = vm.$el
-        expect(element.classList.contains('col-pc-1')).to.eq(true)
-        expect(element.classList.contains('offset-pc-2')).to.eq(true)
-        div.remove()
-        vm.$destroy()
-    })
 })
