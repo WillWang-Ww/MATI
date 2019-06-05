@@ -36,19 +36,6 @@ new Vue({
 
     },
     methods:{
-        showToast(position){
-            this.$toast('一条长长长长长长的信息来啦',{
-                enableHtml: false,
-                position,
-                closeButton: {
-                    text:'关闭',
-                    callback(){
-                        console.log('OK')
-                    }
-                },
-                autoClose: true,
-                autoCloseDelay: 100
-            })
-        }
+
     }
 })

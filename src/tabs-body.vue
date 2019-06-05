@@ -3,5 +3,12 @@
         <slot></slot>
     </div>
 </template>
-<script></script>
+<script>
+    export default {
+        name:'MatiTabsBody',
+        inject:['eventBus'],
+        created() {
+        }
+    }
+</script>
 <style></style>
