@@ -31,6 +31,15 @@
             }
         },
         mounted() {
+            this.$children.forEach((vm)=>{
+                if(vm.$options.name === 'MatiTabsHead') {
+                    vm.$children.forEach((childvm) => {
+                        if (childvm.name === this.selected){
+                            this.eventBus.$emit('update:selected',this.selected,childvm)
+                        }
+                    })
+                }
+            })
             this.eventBus.$emit('update:selected',this.selected)
         }
     }
