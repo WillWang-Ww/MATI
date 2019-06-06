@@ -11,9 +11,11 @@
     export default {
         name:'MatiTabsHead',
         inject:['eventBus'],
-        created() {
+        mounted() {
             this.eventBus.$on('update:selected',(item,vm)=>{
-                console.log(item);
+                let {width,height,top,left} = vm.$el.getBoundingClientRect()
+                this.$refs.line.style.width = `${width}px`
+                this.$refs.line.style.left = `${left}px`
             })
         }
     }
@@ -26,16 +28,19 @@
         height: $tab-height;
         justify-content: flex-start;
         align-items: center;
-        border: 1px solid black;
         position: relative;
         > .line {
             position:absolute;
             bottom: 0;
             border-bottom: 2px solid $blue;
-            width: 50px;
+            transition:all 350ms;
+            border:1px solid red;
         }
         > .actions-wrapper{
             margin-left: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
 </style>
