@@ -25,6 +25,7 @@
         }
 
         #app {
+            padding: 50px;
         }
 
         body {
@@ -35,33 +36,12 @@
 <body>
 
 <div id="app">
-    <g-tabs :selected.sync="selectedTab" @update:selected="yyy">
-        <g-tabs-head>
-            <template slot="actions">
-                <button>setting</button>
-            </template>
-            <g-tabs-item name="girls">
-                girls
-            </g-tabs-item>
-            <g-tabs-item name="finance" disabled>
-                finance
-            </g-tabs-item>
-            <g-tabs-item name="sports">
-                sports
-            </g-tabs-item>
-        </g-tabs-head>
-        <g-tabs-body>
-            <g-tabs-pane name="girls">
-                info-girls
-            </g-tabs-pane>
-            <g-tabs-pane name="finance">
-                info-finance
-            </g-tabs-pane>
-            <g-tabs-pane name="sports">
-                info-sports
-            </g-tabs-pane>
-        </g-tabs-body>
-    </g-tabs>
+   <g-popover>
+       <template slot="content">
+           <div>popover content</div>
+       </template>
+       <button>Click here</button>
+   </g-popover>
 </div>
 <script src="./src/app.js"></script>
 </body>
