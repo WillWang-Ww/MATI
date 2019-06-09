@@ -36,12 +36,6 @@ Vue.use(plugin)
 new Vue({
     el: '#app',
     data: {
-        selectedTab:'sports'
-    },
-    created () {
-
-    },
-    methods:{
-
+        selectedTab:'2'
     }
 })

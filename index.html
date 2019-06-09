@@ -36,11 +36,12 @@
 <body>
 
 <div id="app">
-    <g-collapse single>
-        <g-collapse-item title="标题1">111</g-collapse-item>
-        <g-collapse-item title="标题2">222</g-collapse-item>
-        <g-collapse-item title="标题3">333</g-collapse-item>
+    <g-collapse :selected.sync="selectedTab">
+        <g-collapse-item title="标题1" name="1">111</g-collapse-item>
+        <g-collapse-item title="标题2" name="2">222</g-collapse-item>
+        <g-collapse-item title="标题3" name="3">333</g-collapse-item>
     </g-collapse>
+    {{selectedTab}}
 </div>
 <script src="./src/app.js"></script>
 </body>
