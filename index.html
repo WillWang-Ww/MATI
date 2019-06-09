@@ -35,13 +35,31 @@
 </head>
 <body>
 
-<div id="app" style="overflow: hidden">
-   <g-popover>
+<div id="app">
+   <g-popover position="top">
        <template slot="content">
            <div>popover content</div>
        </template>
-       <button>Click here</button>
+       <g-button>Click here</g-button>
    </g-popover>
+    <g-popover position="bottom">
+        <template slot="content">
+            <div>popover content</div>
+        </template>
+        <g-button>Click here</g-button>
+    </g-popover>
+    <g-popover position="left">
+        <template slot="content">
+            <div>popover content</div>
+        </template>
+        <g-button>Click here</g-button>
+    </g-popover>
+    <g-popover position="right">
+        <template slot="content">
+            <div>popover content</div>
+        </template>
+        <g-button>Click here</g-button>
+    </g-popover>
 </div>
 <script src="./src/app.js"></script>
 </body>
