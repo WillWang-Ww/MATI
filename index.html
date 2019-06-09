@@ -36,30 +36,11 @@
 <body>
 
 <div id="app">
-   <g-popover position="top" >
-       <template slot="content">
-           <div>popover content</div>
-       </template>
-       <g-button>Click here</g-button>
-   </g-popover>
-    <g-popover position="bottom">
-        <template slot="content">
-            <div>popover content</div>
-        </template>
-        <g-button>Click here</g-button>
-    </g-popover>
-    <g-popover position="top" trigger="hover">
-        <template slot="content">
-            <div>popover content</div>
-        </template>
-        <g-button>Click here</g-button>
-    </g-popover>
-    <g-popover position="bottom" trigger="hover">
-        <template slot="content">
-            <div>popover content</div>
-        </template>
-        <g-button>Click here</g-button>
-    </g-popover>
+    <g-collapse>
+        <g-collapse-item title="标题1">111</g-collapse-item>
+        <g-collapse-item title="标题2">222</g-collapse-item>
+        <g-collapse-item title="标题3">333</g-collapse-item>
+    </g-collapse>
 </div>
 <script src="./src/app.js"></script>
 </body>
