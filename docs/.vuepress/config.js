@@ -9,12 +9,19 @@ module.exports = {
         ],
         sidebar: [
             {
-                title: '安装',
+                title: '入门',
                 collapsable: false,
                 children: [
-                    '/install'
+                    '/install/'
                 ]
-            }
+            },
+            {
+                title: '组件',
+                collapsable: false,
+                children: [
+                  '/component/button/',
+                ]
+            },
         ]
 
     }
