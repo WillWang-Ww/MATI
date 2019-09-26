@@ -1,4 +1,5 @@
 module.exports = {
+    base: '/MATI/',
     title: 'MATI　UI',
     description: '一个简易的初学者UI框架',
     themeConfig: {
